@@ -1,58 +1,129 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Jowe Boy&apos;s Website</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-	</head>
-
-	<body>
-		<header>
-			<div class="row">
-				<div class="logo">
-					<img src="assets/logo-new.png" alt="oe_logo">
-				</div>
-				<ul class="main-nav">
-					<li class="active"><a href="">HOME</a></li>
-					<li><a href="">SERVICES</a></li>
-					<li><a href="">ABOUT</a></li>
-					<li><a href="">BLOG</a></li>
-					<li><a href="">CONTACT</a></li>
-					<li><a href="">FAQ</a></li>
-				</ul>
-			</div>
-			<div class="hero">
-				<h1>Ready for Action?</h1>
-				<div class="button">
-					<a href="" class="btn btn-one">Watch Video</a>
-					<a href="" class="btn btn-two">Explore More</a>
-				</div>
-			</div>
-		</header>
-		<section class="service grid-container">
-		</section>
-		<section class="about grid-container">
-		</section>
-		<section class="blog grid-container">
-		</section>
-		<section class="contact grid-container">
-			<div class="contact-form grid-item">
-				<div class="contact-section-header">
-					<h2>Get in touch with us!</h2>
-				</div>
-				<form class="form">
-					<input type="text" name="fullname" placeholder="Fullname">
-					<input type="email" name="email" placeholder="Email Address">
-					<input type="number" name="phonenumber" placeholder="Phone Number">
-					<textarea class="subject" name="subject" placeholder="Your subject here..."></textarea>
-					<input class="button" type="submit" value="Submit">
-				</form>
-			</div>
-			<div class="contact-form grid-item">
-			</div>
-		</section>
-		<section class="faq grid-container">
-		</section>
-	</body>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="icon" href="favicon.svg">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/century-gothic-paneuropean');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+    body {
+      margin: 0;
+      font-family: "Merriweather", Georgia, serif;
+      background: #000000;
+      color: #ffffff;
+    }
+    ::selection {
+      background-color: #00ff00;
+      color: #000000;
+    }
+    a {
+      color: #00ff00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #bg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .wrapper {
+      max-width: 800px;
+      padding: 32px;
+    }
+    .hero {
+      font-family: "Century Gothic Paneuropean", Georgia, serif;
+      font-size: 54px;
+      margin: 0;
+    }
+    .hero span {
+      background: #00ff00;
+      color: #000000;
+      padding: 0 8px;
+    }
+    .hero span ::selection {
+      background: #000000;
+      color: #00ff00;
+    }
+    .description {
+      line-height: 36px;
+      font-size: 26px;
+      margin: 14px 0;
+    }
+    .url-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+    .url-container {
+      margin-right: 50px;
+    }
+    .list-entry {
+      font-family: "Fira Code", monospace;
+      margin: 10px 0;
+    }
+    .list-pointer {
+      opacity: 0.5;
+    }
+    .list-entry, .contact {
+      font-size: 22px;
+    }
+    @media only screen and (max-width: 600px) {
+      .hero span {
+        padding: 8px;
+      }
+      :not(.url-container ~ .url-container).url-container p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="bg">
+    <div class="wrapper">
+      <h1 class="hero">Hi, I'm <span><i>Diego</i></span>!</h1>
+      <p class="description">If you like videogames as much as I do, we will get along!<br>You can find me here —</p>
+      <div class="url-wrapper">
+        <div class="url-container">
+          <p class="list-entry">
+            <span class="list-pointer">&gt;</span>
+            <span>Linkedin:
+              <a href="https://www.linkedin.com/in/diego-avila-ac/" aria-label="LinkedIn" target="_blank">@Diego-Avila-Acosta</a>
+            </span>
+          </p>
+        </div>
+        <div class="url-container">
+          <p class="list-entry">
+            <span class="list-pointer">&gt;</span>
+            <span>Github:
+              <a href="https://github.com/Diego-Avila-Acosta" aria-label="Github" target="_blank">@Diego-Avila-Acosta</a>
+            </span>
+          </p>
+        </div>
+      </div>
+      <p class="contact">Contact me: <a href="mailto:example@email.com" aria-label="Email">example@email.com</a></p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+  VANTA.NET({
+    el: "#bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+  })
+</script>
+</body>
 </html>
